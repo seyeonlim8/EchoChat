@@ -35,7 +35,7 @@ int main()
         //indicate program terminated with error if socket wasn't created.
         exit(EXIT_FAILURE);
     }
-    std::cout << "Socket created." << std::endl;
+    std::cout << "Socket created. - Server" << std::endl;
 
     //Binding
     //sockaddr_in is a struct used to store endpoint address
