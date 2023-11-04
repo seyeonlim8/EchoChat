@@ -50,7 +50,7 @@ int main()
         std::cout << "Client: ";
         std::string input;
         std::getline(std::cin, input); // Using getline to include spaces.
-        strncpy(buffer, input.c_str(), buffsize - 1); // Safely copy to buffer.
+        strncpy(buffer, input.c_str(), buffsize - 1); // Safely copy to buffer; prevent buffer overflow and keep space for null termination.
         buffer[buffsize - 1] = '\0'; // Ensure null-termination.
 
         send(sockfd, buffer, strlen(buffer), 0);
