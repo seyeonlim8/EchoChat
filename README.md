@@ -1,4 +1,5 @@
-# EchoChat Server-Client Messaging System
+# EchoChat 
+Server-Client Messaging System
 
 EchoChat is a basic server-client messaging system that uses TCP/IP protocols to enable communication between a server and multiple clients. This project is built using C++, showcasing the principles of socket programming and multi-threaded server management.
 
