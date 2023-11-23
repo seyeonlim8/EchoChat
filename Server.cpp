@@ -35,7 +35,7 @@ int main()
         //indicate program terminated with error if socket wasn't created.
         exit(EXIT_FAILURE);
     }
-    std::cout << "Socket created. - Server" << std::endl;
+    std::cout << "Socket created." << std::endl;
 
     //Binding
     //sockaddr_in is a struct used to store endpoint address
@@ -72,6 +72,7 @@ int main()
         }
 
         pthread_t clientThread;
+        //std::cout << pthread_self()  << std::endl;
         int* new_conn = new int(connection);
         if(pthread_create(&clientThread, NULL, handleClients, (void*)new_conn) != 0) {
             std::cout << "Failed to create thread for client." << std::endl;
@@ -117,7 +118,7 @@ void *handleClients(void *arg) {
         }
 
         // Print the received message to the server's console
-        std::cout << "Client: " << buffer << std::endl;
+        std::cout << "Client" << pthread_self() << ": " << buffer << std::endl;
 
         // Send a response or message back to the client
         std::cout << "Server: ";
